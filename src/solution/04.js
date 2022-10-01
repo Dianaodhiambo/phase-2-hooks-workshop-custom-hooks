@@ -12,17 +12,7 @@ export function useLocalStorage(key, initialValue = null) {
   return [state, setState];
 }
 
-export default function App() {
-  return (
-    <div>
-      <h2>useLocalStorage can save string</h2>
-      <Form />
-      <hr />
-      <h2>useLocalStorage can save objects (Bonus)</h2>
-      <FormWithObject />
-    </div>
-  );
-}
+
 
 function Form() {
   const [name, setName] = useLocalStorage("_solution_1_username", "");
@@ -59,5 +49,16 @@ function FormWithObject() {
         onChange={handleChange}
       />
     </form>
+  );
+}
+export default function App() {
+  return (
+    <div>
+      <h2>useLocalStorage can save string</h2>
+      <Form />
+      <hr />
+      <h2>useLocalStorage can save objects (Bonus)</h2>
+      <FormWithObject />
+    </div>
   );
 }
